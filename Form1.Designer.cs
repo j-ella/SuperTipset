@@ -137,7 +137,7 @@
             this.cmb_sport.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sport.FormattingEnabled = true;
             this.cmb_sport.Location = new System.Drawing.Point(20, 35);
-            this.cmb_sport.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_sport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmb_sport.Name = "cmb_sport";
             this.cmb_sport.Size = new System.Drawing.Size(130, 22);
             this.cmb_sport.TabIndex = 5;
@@ -160,8 +160,8 @@
             // txt_team1
             // 
             this.txt_team1.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_team1.Location = new System.Drawing.Point(20, 93);
-            this.txt_team1.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team1.Location = new System.Drawing.Point(27, 115);
+            this.txt_team1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team1.Name = "txt_team1";
             this.txt_team1.Size = new System.Drawing.Size(130, 22);
             this.txt_team1.TabIndex = 6;
@@ -169,8 +169,8 @@
             // txt_team2
             // 
             this.txt_team2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team2.Location = new System.Drawing.Point(20, 121);
-            this.txt_team2.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team2.Location = new System.Drawing.Point(27, 149);
+            this.txt_team2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team2.Name = "txt_team2";
             this.txt_team2.Size = new System.Drawing.Size(130, 21);
             this.txt_team2.TabIndex = 7;
@@ -178,8 +178,8 @@
             // txt_team3
             // 
             this.txt_team3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team3.Location = new System.Drawing.Point(20, 154);
-            this.txt_team3.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team3.Location = new System.Drawing.Point(26, 189);
+            this.txt_team3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team3.Name = "txt_team3";
             this.txt_team3.Size = new System.Drawing.Size(130, 21);
             this.txt_team3.TabIndex = 8;
@@ -187,8 +187,8 @@
             // txt_team4
             // 
             this.txt_team4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team4.Location = new System.Drawing.Point(20, 187);
-            this.txt_team4.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team4.Location = new System.Drawing.Point(26, 230);
+            this.txt_team4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team4.Name = "txt_team4";
             this.txt_team4.Size = new System.Drawing.Size(130, 21);
             this.txt_team4.TabIndex = 9;
@@ -196,8 +196,8 @@
             // btn_create
             // 
             this.btn_create.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create.Location = new System.Drawing.Point(20, 236);
-            this.btn_create.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_create.Location = new System.Drawing.Point(26, 291);
+            this.btn_create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(129, 35);
             this.btn_create.TabIndex = 10;
@@ -207,8 +207,8 @@
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(20, 277);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_add.Location = new System.Drawing.Point(26, 341);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(129, 35);
             this.btn_add.TabIndex = 11;
@@ -219,8 +219,8 @@
             // btn_quit
             // 
             this.btn_quit.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quit.Location = new System.Drawing.Point(20, 316);
-            this.btn_quit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_quit.Location = new System.Drawing.Point(26, 389);
+            this.btn_quit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_quit.Name = "btn_quit";
             this.btn_quit.Size = new System.Drawing.Size(129, 33);
             this.btn_quit.TabIndex = 12;
@@ -257,14 +257,14 @@
             this.dgv_teamlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_teamlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lagDataGridViewTextBoxColumn});
-            this.dgv_teamlist.DataSource = this.lagBindingSource;
-            this.dgv_teamlist.Location = new System.Drawing.Point(182, 35);
-            this.dgv_teamlist.Margin = new System.Windows.Forms.Padding(2);
-            this.dgv_teamlist.Name = "dgv_teamlist";
-            this.dgv_teamlist.RowHeadersWidth = 62;
-            this.dgv_teamlist.RowTemplate.Height = 28;
-            this.dgv_teamlist.Size = new System.Drawing.Size(226, 277);
-            this.dgv_teamlist.TabIndex = 13;
+            this.dataGridView1.DataSource = this.lagBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(242, 43);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(301, 341);
+            this.dataGridView1.TabIndex = 13;
             // 
             // lagDataGridViewTextBoxColumn
             // 
@@ -277,8 +277,8 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(448, 35);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(598, 43);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
@@ -288,8 +288,8 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(448, 202);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView3.Location = new System.Drawing.Point(598, 248);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.Size = new System.Drawing.Size(297, 110);
@@ -297,7 +297,7 @@
             // 
             // frm_homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 381);
             this.Controls.Add(this.dataGridView3);
@@ -316,7 +316,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_homepage";
             this.Text = "Startsida";
             this.Load += new System.EventHandler(this.frm_homepage_Load);

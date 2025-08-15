@@ -32,5 +32,10 @@ namespace SuperTipset
             frm_Newteams.Show();
             this.Hide();
         }
+        //Avslutaknappen som stänger ner applikationen
+        private void btn_quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

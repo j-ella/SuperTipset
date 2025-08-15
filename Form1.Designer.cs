@@ -56,9 +56,9 @@
             this.fKLagSportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTipsetDataSet)).BeginInit();
@@ -187,7 +187,6 @@
             this.txt_team4.Name = "txt_team4";
             this.txt_team4.Size = new System.Drawing.Size(172, 24);
             this.txt_team4.TabIndex = 9;
-           
             // 
             // btn_create
             // 
@@ -222,6 +221,7 @@
             this.btn_quit.TabIndex = 12;
             this.btn_quit.Text = "Avsluta";
             this.btn_quit.UseVisualStyleBackColor = true;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
             // 
             // sportTableAdapter
             // 
@@ -261,6 +261,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(301, 341);
             this.dataGridView1.TabIndex = 13;
             // 
+            // lagDataGridViewTextBoxColumn
+            // 
+            this.lagDataGridViewTextBoxColumn.DataPropertyName = "Lag";
+            this.lagDataGridViewTextBoxColumn.HeaderText = "Lag";
+            this.lagDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lagDataGridViewTextBoxColumn.Name = "lagDataGridViewTextBoxColumn";
+            this.lagDataGridViewTextBoxColumn.Width = 175;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -281,14 +289,6 @@
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.Size = new System.Drawing.Size(396, 136);
             this.dataGridView3.TabIndex = 15;
-            // 
-            // lagDataGridViewTextBoxColumn
-            // 
-            this.lagDataGridViewTextBoxColumn.DataPropertyName = "Lag";
-            this.lagDataGridViewTextBoxColumn.HeaderText = "Lag";
-            this.lagDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.lagDataGridViewTextBoxColumn.Name = "lagDataGridViewTextBoxColumn";
-            this.lagDataGridViewTextBoxColumn.Width = 175;
             // 
             // frm_homepage
             // 

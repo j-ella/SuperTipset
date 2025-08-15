@@ -55,7 +55,7 @@
             this.lagBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.fKLagSportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_teamlist = new System.Windows.Forms.DataGridView();
             this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lagBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLagSportBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_teamlist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -246,20 +246,20 @@
             this.fKLagSportBindingSource1.DataMember = "FK_Lag_Sport";
             this.fKLagSportBindingSource1.DataSource = this.sportBindingSource;
             // 
-            // dataGridView1
+            // dgv_teamlist
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_teamlist.AutoGenerateColumns = false;
+            this.dgv_teamlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_teamlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lagDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.lagBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(242, 43);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(301, 341);
-            this.dataGridView1.TabIndex = 13;
+            this.dgv_teamlist.DataSource = this.lagBindingSource;
+            this.dgv_teamlist.Location = new System.Drawing.Point(242, 43);
+            this.dgv_teamlist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_teamlist.Name = "dgv_teamlist";
+            this.dgv_teamlist.RowHeadersWidth = 62;
+            this.dgv_teamlist.RowTemplate.Height = 28;
+            this.dgv_teamlist.Size = new System.Drawing.Size(301, 341);
+            this.dgv_teamlist.TabIndex = 13;
             // 
             // lagDataGridViewTextBoxColumn
             // 
@@ -297,7 +297,7 @@
             this.ClientSize = new System.Drawing.Size(1083, 469);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_teamlist);
             this.Controls.Add(this.btn_quit);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.btn_create);
@@ -326,7 +326,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lagBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKLagSportBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_teamlist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
@@ -362,7 +362,7 @@
         private System.Windows.Forms.BindingSource lagBindingSource4;
         private System.Windows.Forms.BindingSource fKLagSportBindingSource1;
         private System.Windows.Forms.BindingSource bindingSource2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_teamlist;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn lagDataGridViewTextBoxColumn;

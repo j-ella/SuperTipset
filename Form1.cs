@@ -25,7 +25,7 @@ namespace SuperTipset
             this.sportTableAdapter.Fill(this.superTipsetDataSet.Sport);
 
         }
-        //ella-edit test branch
+        
         private void btn_add_Click(object sender, EventArgs e)
         {
             frm_newteams frm_Newteams = new frm_newteams();

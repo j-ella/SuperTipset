@@ -47,9 +47,9 @@ namespace SuperTipset
 
              // SQL-fråga för att hämta endast de lag som tillhör vald sport
              string query = "SELECT * FROM Lag WHERE SportID = @Sport";
-             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-             using (SqlConnection conn = new SqlConnection("Data Source=LEXICON\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
+            //---------ÄNDRA TILL DITT EGNA SERVERNAMN----------
+             using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
              using (SqlCommand cmd = new SqlCommand(query, conn))
              {
                  cmd.Parameters.AddWithValue("@Sport", sportID);

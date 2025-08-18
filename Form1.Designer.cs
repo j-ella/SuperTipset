@@ -56,9 +56,9 @@
             this.fKLagSportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dgv_teamlist = new System.Windows.Forms.DataGridView();
-            this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.sportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTipsetDataSet)).BeginInit();
@@ -79,10 +79,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(23, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
+            this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Välj sport";
             // 
@@ -90,10 +89,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(23, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Valda lag";
             // 
@@ -101,10 +99,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(446, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(595, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 15);
+            this.label3.Size = new System.Drawing.Size(171, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Spelschema och resultat";
             // 
@@ -112,10 +109,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(178, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(260, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 15);
+            this.label4.Size = new System.Drawing.Size(153, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Klicka på önskade lag";
             // 
@@ -123,10 +119,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(446, 187);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(596, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tabell";
             // 
@@ -136,10 +131,10 @@
             this.cmb_sport.DisplayMember = "Sport";
             this.cmb_sport.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sport.FormattingEnabled = true;
-            this.cmb_sport.Location = new System.Drawing.Point(20, 35);
-            this.cmb_sport.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_sport.Location = new System.Drawing.Point(27, 43);
+            this.cmb_sport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmb_sport.Name = "cmb_sport";
-            this.cmb_sport.Size = new System.Drawing.Size(130, 22);
+            this.cmb_sport.Size = new System.Drawing.Size(172, 25);
             this.cmb_sport.TabIndex = 5;
             this.cmb_sport.SelectedIndexChanged += new System.EventHandler(this.cmb_sport_SelectedIndexChanged);
             // 
@@ -161,46 +156,46 @@
             // txt_team1
             // 
             this.txt_team1.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_team1.Location = new System.Drawing.Point(20, 93);
-            this.txt_team1.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team1.Location = new System.Drawing.Point(27, 114);
+            this.txt_team1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team1.Name = "txt_team1";
-            this.txt_team1.Size = new System.Drawing.Size(130, 22);
+            this.txt_team1.Size = new System.Drawing.Size(172, 25);
             this.txt_team1.TabIndex = 6;
             // 
             // txt_team2
             // 
             this.txt_team2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team2.Location = new System.Drawing.Point(20, 121);
-            this.txt_team2.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team2.Location = new System.Drawing.Point(27, 149);
+            this.txt_team2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team2.Name = "txt_team2";
-            this.txt_team2.Size = new System.Drawing.Size(130, 21);
+            this.txt_team2.Size = new System.Drawing.Size(172, 24);
             this.txt_team2.TabIndex = 7;
             // 
             // txt_team3
             // 
             this.txt_team3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team3.Location = new System.Drawing.Point(20, 154);
-            this.txt_team3.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team3.Location = new System.Drawing.Point(27, 190);
+            this.txt_team3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team3.Name = "txt_team3";
-            this.txt_team3.Size = new System.Drawing.Size(130, 21);
+            this.txt_team3.Size = new System.Drawing.Size(172, 24);
             this.txt_team3.TabIndex = 8;
             // 
             // txt_team4
             // 
             this.txt_team4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team4.Location = new System.Drawing.Point(20, 187);
-            this.txt_team4.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_team4.Location = new System.Drawing.Point(27, 230);
+            this.txt_team4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_team4.Name = "txt_team4";
-            this.txt_team4.Size = new System.Drawing.Size(130, 21);
+            this.txt_team4.Size = new System.Drawing.Size(172, 24);
             this.txt_team4.TabIndex = 9;
             // 
             // btn_create
             // 
             this.btn_create.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create.Location = new System.Drawing.Point(20, 236);
-            this.btn_create.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_create.Location = new System.Drawing.Point(27, 290);
+            this.btn_create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(129, 35);
+            this.btn_create.Size = new System.Drawing.Size(172, 43);
             this.btn_create.TabIndex = 10;
             this.btn_create.Text = "Skapa spelschema";
             this.btn_create.UseVisualStyleBackColor = true;
@@ -208,10 +203,10 @@
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(20, 277);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_add.Location = new System.Drawing.Point(27, 341);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(129, 35);
+            this.btn_add.Size = new System.Drawing.Size(172, 43);
             this.btn_add.TabIndex = 11;
             this.btn_add.Text = "Lägg till nya lag";
             this.btn_add.UseVisualStyleBackColor = true;
@@ -220,10 +215,10 @@
             // btn_quit
             // 
             this.btn_quit.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quit.Location = new System.Drawing.Point(20, 316);
-            this.btn_quit.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_quit.Location = new System.Drawing.Point(27, 389);
+            this.btn_quit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_quit.Name = "btn_quit";
-            this.btn_quit.Size = new System.Drawing.Size(129, 33);
+            this.btn_quit.Size = new System.Drawing.Size(172, 41);
             this.btn_quit.TabIndex = 12;
             this.btn_quit.Text = "Avsluta";
             this.btn_quit.UseVisualStyleBackColor = true;
@@ -259,13 +254,35 @@
             this.dgv_teamlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lagDataGridViewTextBoxColumn});
             this.dgv_teamlist.DataSource = this.lagBindingSource;
-            this.dgv_teamlist.Location = new System.Drawing.Point(182, 35);
-            this.dgv_teamlist.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_teamlist.Location = new System.Drawing.Point(266, 43);
+            this.dgv_teamlist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_teamlist.Name = "dgv_teamlist";
             this.dgv_teamlist.RowHeadersWidth = 62;
             this.dgv_teamlist.RowTemplate.Height = 28;
-            this.dgv_teamlist.Size = new System.Drawing.Size(226, 277);
+            this.dgv_teamlist.Size = new System.Drawing.Size(262, 387);
             this.dgv_teamlist.TabIndex = 13;
+            this.dgv_teamlist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_teamlist_CellClick);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(597, 43);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(400, 170);
+            this.dataGridView2.TabIndex = 14;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(598, 259);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
+            this.dataGridView3.Size = new System.Drawing.Size(400, 171);
+            this.dataGridView3.TabIndex = 15;
             // 
             // lagDataGridViewTextBoxColumn
             // 
@@ -273,34 +290,13 @@
             this.lagDataGridViewTextBoxColumn.HeaderText = "Lag";
             this.lagDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.lagDataGridViewTextBoxColumn.Name = "lagDataGridViewTextBoxColumn";
-            this.lagDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(448, 35);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(297, 128);
-            this.dataGridView2.TabIndex = 14;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(448, 202);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.Size = new System.Drawing.Size(297, 110);
-            this.dataGridView3.TabIndex = 15;
+            this.lagDataGridViewTextBoxColumn.Width = 200;
             // 
             // frm_homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 381);
+            this.ClientSize = new System.Drawing.Size(1083, 469);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dgv_teamlist);
@@ -317,7 +313,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_homepage";
             this.Text = "Startsida";
             this.Load += new System.EventHandler(this.frm_homepage_Load);

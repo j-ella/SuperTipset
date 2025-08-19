@@ -50,11 +50,9 @@ namespace SuperTipset
 
             // SQL-fråga för att hämta endast de lag som tillhör vald sport
             string query = "SELECT * FROM Lag WHERE SportID = @Sport";
-             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-             using (SqlConnection conn = new SqlConnection("Data Source=LEXICON\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
+            //---------ÄNDRA TILL DITT EGNA SERVERNAMN----
+            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
              using (SqlCommand cmd = new SqlCommand(query, conn))
              {
                  cmd.Parameters.AddWithValue("@Sport", sportID);
@@ -174,6 +172,15 @@ namespace SuperTipset
             // Visa i DataGridView (spelschema)
             dgv_gameSchedule.AutoGenerateColumns = true;
             dgv_gameSchedule.DataSource = matcher;
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            dgv_gameSchedule.DataSource=null;
+            txt_team1.Text=null;
+            txt_team2.Text=null;
+            txt_team3.Text=null;
+            txt_team4.Text=null;
         }
     }
     public class MatchResultat

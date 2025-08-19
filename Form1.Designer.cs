@@ -56,9 +56,9 @@
             this.fKLagSportBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dgv_teamlist = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_result = new System.Windows.Forms.DataGridView();
+            this.dgv_gameSchedule = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.sportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTipsetDataSet)).BeginInit();
@@ -71,8 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKLagSportBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_teamlist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_gameSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -192,18 +192,19 @@
             // btn_create
             // 
             this.btn_create.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create.Location = new System.Drawing.Point(27, 290);
+            this.btn_create.Location = new System.Drawing.Point(26, 299);
             this.btn_create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(172, 43);
             this.btn_create.TabIndex = 10;
             this.btn_create.Text = "Skapa spelschema";
             this.btn_create.UseVisualStyleBackColor = true;
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
             // 
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(27, 341);
+            this.btn_add.Location = new System.Drawing.Point(26, 350);
             this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(172, 43);
@@ -215,7 +216,7 @@
             // btn_quit
             // 
             this.btn_quit.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quit.Location = new System.Drawing.Point(27, 389);
+            this.btn_quit.Location = new System.Drawing.Point(26, 398);
             this.btn_quit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_quit.Name = "btn_quit";
             this.btn_quit.Size = new System.Drawing.Size(172, 41);
@@ -259,30 +260,9 @@
             this.dgv_teamlist.Name = "dgv_teamlist";
             this.dgv_teamlist.RowHeadersWidth = 62;
             this.dgv_teamlist.RowTemplate.Height = 28;
-            this.dgv_teamlist.Size = new System.Drawing.Size(262, 387);
+            this.dgv_teamlist.Size = new System.Drawing.Size(262, 396);
             this.dgv_teamlist.TabIndex = 13;
             this.dgv_teamlist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_teamlist_CellClick);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(597, 43);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(400, 170);
-            this.dataGridView2.TabIndex = 14;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(598, 259);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.Size = new System.Drawing.Size(400, 171);
-            this.dataGridView3.TabIndex = 15;
             // 
             // lagDataGridViewTextBoxColumn
             // 
@@ -292,13 +272,32 @@
             this.lagDataGridViewTextBoxColumn.Name = "lagDataGridViewTextBoxColumn";
             this.lagDataGridViewTextBoxColumn.Width = 200;
             // 
+            // dgv_result
+            // 
+            this.dgv_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_result.Location = new System.Drawing.Point(600, 259);
+            this.dgv_result.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_result.Name = "dgv_result";
+            this.dgv_result.RowHeadersWidth = 62;
+            this.dgv_result.Size = new System.Drawing.Size(575, 180);
+            this.dgv_result.TabIndex = 15;
+            // 
+            // dgv_gameSchedule
+            // 
+            this.dgv_gameSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_gameSchedule.Location = new System.Drawing.Point(600, 46);
+            this.dgv_gameSchedule.Name = "dgv_gameSchedule";
+            this.dgv_gameSchedule.RowHeadersWidth = 51;
+            this.dgv_gameSchedule.Size = new System.Drawing.Size(575, 180);
+            this.dgv_gameSchedule.TabIndex = 16;
+            // 
             // frm_homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 469);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
+            this.ClientSize = new System.Drawing.Size(1346, 496);
+            this.Controls.Add(this.dgv_gameSchedule);
+            this.Controls.Add(this.dgv_result);
             this.Controls.Add(this.dgv_teamlist);
             this.Controls.Add(this.btn_quit);
             this.Controls.Add(this.btn_add);
@@ -329,8 +328,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKLagSportBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_teamlist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_gameSchedule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,9 +364,9 @@
         private System.Windows.Forms.BindingSource fKLagSportBindingSource1;
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.DataGridView dgv_teamlist;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgv_result;
         private System.Windows.Forms.DataGridViewTextBoxColumn lagDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dgv_gameSchedule;
     }
 }
 

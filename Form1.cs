@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace SuperTipset
 {
+
     public partial class frm_homepage : Form
     {
         public frm_homepage()
@@ -34,22 +35,26 @@ namespace SuperTipset
             frm_Newteams.Show();
             this.Hide();
         }
+
         //Avslutaknappen som stänger ner applikationen
         private void btn_quit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
         //Hämtar lag från vald sport i combobox och visar i datagridview
-         private void cmb_sport_SelectedIndexChanged(object sender, EventArgs e)
-         {
-             // Hämta sportens ID eller namn från ComboBoxen
-             int sportID = Convert.ToInt32 (cmb_sport.SelectedIndex+1);
+        private void cmb_sport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Hämta sportens ID eller namn från ComboBoxen
+            int sportID = Convert.ToInt32(cmb_sport.SelectedIndex + 1);
 
-             // SQL-fråga för att hämta endast de lag som tillhör vald sport
-             string query = "SELECT * FROM Lag WHERE SportID = @Sport";
+            // SQL-fråga för att hämta endast de lag som tillhör vald sport
+            string query = "SELECT * FROM Lag WHERE SportID = @Sport";
+             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+             //string connectionstring = "Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-            //---------ÄNDRA TILL DITT EGNA SERVERNAMN----------
-             using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
+             using (SqlConnection conn = new SqlConnection("Data Source=LEXICON\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
              using (SqlCommand cmd = new SqlCommand(query, conn))
              {
                  cmd.Parameters.AddWithValue("@Sport", sportID);
@@ -57,10 +62,10 @@ namespace SuperTipset
                  DataTable dt = new DataTable();
                  adapter.Fill(dt);
 
-                 // Sätt DataGridView till den filtrerade tabellen
-                 dgv_teamlist.DataSource = dt;
-             }
-         }
+                // Sätt DataGridView till den filtrerade tabellen
+                dgv_teamlist.DataSource = dt;
+            }
+        }
         private void dgv_teamlist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // undvik headern
@@ -99,5 +104,83 @@ namespace SuperTipset
                 }
             }
         }
+        private List<MatchResultat> GenereraSpelschema(string sport, List<string> lag)
+        {
+            if (lag.Count != 4)
+                throw new ArgumentException("Exakt 4 lag måste väljas!");
+
+            var matcher = new List<(string Hemma, string Borta)>
+            {
+                (lag[0], lag[1]),
+                (lag[2], lag[3]),
+                (lag[0], lag[2]),
+                (lag[1], lag[3]),
+                (lag[0], lag[3]),
+                (lag[1], lag[2])
+            };
+
+            Random rnd = new Random();
+            var resultatLista = new List<MatchResultat>();
+
+            foreach (var match in matcher)
+            {
+                int målHemma = 0, målBorta = 0;
+
+                if (sport == "Ishockey")
+                {
+                    målHemma = rnd.Next(0, 7);   
+                    målBorta = rnd.Next(0, 7);
+                }
+                else if (sport == "Fotboll")
+                {
+                    målHemma = rnd.Next(0, 4);   
+                    målBorta = rnd.Next(0, 4);
+                }
+                else if (sport == "Basket")
+                {
+                    målHemma = rnd.Next(50, 121);
+                    målBorta = rnd.Next(50, 121);
+                }
+
+                resultatLista.Add(new MatchResultat
+                {
+                    Hemma = match.Hemma,
+                    Borta = match.Borta,
+                    MålHemma = målHemma,
+                    MålBorta = målBorta
+                });
+            }
+
+            return resultatLista;
+        }
+
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+            // Hämta sportens namn från comboboxen
+            string sport = cmb_sport.Text;
+
+            // Hämta lag från textboxarna
+            var valdaLag = new List<string>
+            {
+                txt_team1.Text,
+                txt_team2.Text,
+                txt_team3.Text,
+                txt_team4.Text
+            };
+
+            // Generera matcher
+            var matcher = GenereraSpelschema(sport, valdaLag);
+
+            // Visa i DataGridView (spelschema)
+            dgv_gameSchedule.AutoGenerateColumns = true;
+            dgv_gameSchedule.DataSource = matcher;
+        }
+    }
+    public class MatchResultat
+    {
+        public string Hemma { get; set; }
+        public string Borta { get; set; }
+        public int MålHemma { get; set; }
+        public int MålBorta { get; set; }
     }
 }

@@ -23,16 +23,19 @@ namespace SuperTipset
             this.lagTableAdapter.Fill(this.superTipsetDataSet1.Lag);
 
         }
-
+        //Knapp för att spara lag till databasen
         private void btn_save_Click(object sender, EventArgs e)
         {
             this.lagTableAdapter.Update(this.superTipsetDataSet1.Lag);
 
+            MessageBox.Show("Laget har lagts till!");
+        }
+        //Knapp för att gå tillbaka till startsidan
+        private void btn_return_Click(object sender, EventArgs e)
+        {
             frm_homepage homepage = new frm_homepage();
             homepage.Show();
             this.Hide();
-
-
         }
     }
 }

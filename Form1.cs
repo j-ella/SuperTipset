@@ -18,6 +18,8 @@ namespace SuperTipset
         {
             InitializeComponent();
             dgv_teamlist.RowHeadersVisible = false;
+            dgv_gameSchedule.RowHeadersVisible = false;
+            dgv_result.RowHeadersVisible = false;
         }
 
         private void frm_homepage_Load(object sender, EventArgs e)
@@ -172,8 +174,11 @@ namespace SuperTipset
             // Visa i DataGridView (spelschema)
             dgv_gameSchedule.AutoGenerateColumns = true;
             dgv_gameSchedule.DataSource = matcher;
+            //dgv_result.DataSource = BeräknaTabell(matcher);
         }
+        //Generera tabell för matchresultat
 
+        //Knapp för att rensa spelschema, resultattabell och valda lag
         private void btn_clear_Click(object sender, EventArgs e)
         {
             dgv_gameSchedule.DataSource=null;
@@ -181,6 +186,7 @@ namespace SuperTipset
             txt_team2.Text=null;
             txt_team3.Text=null;
             txt_team4.Text=null;
+            dgv_result.DataSource=null;
         }
     }
     public class MatchResultat

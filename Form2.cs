@@ -15,6 +15,8 @@ namespace SuperTipset
         public frm_newteams()
         {
             InitializeComponent();
+            dataGridView1.RowHeadersVisible = false;
+
         }
 
         private void Form2_Load(object sender, EventArgs e)

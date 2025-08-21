@@ -127,5 +127,32 @@
   <ItemGroup>
     <None Include="Resources\transperant_logga.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cleartest2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_clear9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_addteams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cleartest5.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

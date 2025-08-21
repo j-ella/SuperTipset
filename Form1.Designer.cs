@@ -83,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(206, 18);
+            this.label1.Location = new System.Drawing.Point(217, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 16);
@@ -95,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(18, 157);
+            this.label2.Location = new System.Drawing.Point(26, 157);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 16);
@@ -119,7 +119,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.label4.Location = new System.Drawing.Point(206, 79);
+            this.label4.Location = new System.Drawing.Point(217, 79);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 16);
@@ -144,7 +144,7 @@
             this.cmb_sport.DisplayMember = "Sport";
             this.cmb_sport.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_sport.FormattingEnabled = true;
-            this.cmb_sport.Location = new System.Drawing.Point(209, 33);
+            this.cmb_sport.Location = new System.Drawing.Point(220, 33);
             this.cmb_sport.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_sport.Name = "cmb_sport";
             this.cmb_sport.Size = new System.Drawing.Size(130, 22);
@@ -169,7 +169,7 @@
             // txt_team1
             // 
             this.txt_team1.Font = new System.Drawing.Font("Microsoft JhengHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_team1.Location = new System.Drawing.Point(21, 175);
+            this.txt_team1.Location = new System.Drawing.Point(29, 175);
             this.txt_team1.Margin = new System.Windows.Forms.Padding(2);
             this.txt_team1.Name = "txt_team1";
             this.txt_team1.Size = new System.Drawing.Size(130, 22);
@@ -178,7 +178,7 @@
             // txt_team2
             // 
             this.txt_team2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team2.Location = new System.Drawing.Point(21, 203);
+            this.txt_team2.Location = new System.Drawing.Point(29, 203);
             this.txt_team2.Margin = new System.Windows.Forms.Padding(2);
             this.txt_team2.Name = "txt_team2";
             this.txt_team2.Size = new System.Drawing.Size(130, 21);
@@ -187,7 +187,7 @@
             // txt_team3
             // 
             this.txt_team3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team3.Location = new System.Drawing.Point(21, 230);
+            this.txt_team3.Location = new System.Drawing.Point(29, 230);
             this.txt_team3.Margin = new System.Windows.Forms.Padding(2);
             this.txt_team3.Name = "txt_team3";
             this.txt_team3.Size = new System.Drawing.Size(130, 21);
@@ -196,7 +196,7 @@
             // txt_team4
             // 
             this.txt_team4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8F);
-            this.txt_team4.Location = new System.Drawing.Point(21, 256);
+            this.txt_team4.Location = new System.Drawing.Point(29, 256);
             this.txt_team4.Margin = new System.Windows.Forms.Padding(2);
             this.txt_team4.Name = "txt_team4";
             this.txt_team4.Size = new System.Drawing.Size(130, 21);
@@ -207,7 +207,7 @@
             this.btn_create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
             this.btn_create.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_create.ForeColor = System.Drawing.Color.Orange;
-            this.btn_create.Location = new System.Drawing.Point(21, 287);
+            this.btn_create.Location = new System.Drawing.Point(29, 287);
             this.btn_create.Margin = new System.Windows.Forms.Padding(2);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(129, 35);
@@ -221,7 +221,7 @@
             this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
             this.btn_add.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add.ForeColor = System.Drawing.Color.Orange;
-            this.btn_add.Location = new System.Drawing.Point(21, 356);
+            this.btn_add.Location = new System.Drawing.Point(29, 356);
             this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(129, 35);
@@ -235,7 +235,7 @@
             this.btn_quit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
             this.btn_quit.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_quit.ForeColor = System.Drawing.Color.Orange;
-            this.btn_quit.Location = new System.Drawing.Point(21, 395);
+            this.btn_quit.Location = new System.Drawing.Point(29, 395);
             this.btn_quit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_quit.Name = "btn_quit";
             this.btn_quit.Size = new System.Drawing.Size(129, 33);
@@ -276,12 +276,12 @@
             this.dgv_teamlist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lagDataGridViewTextBoxColumn});
             this.dgv_teamlist.DataSource = this.lagBindingSource;
-            this.dgv_teamlist.Location = new System.Drawing.Point(205, 94);
+            this.dgv_teamlist.Location = new System.Drawing.Point(216, 94);
             this.dgv_teamlist.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_teamlist.Name = "dgv_teamlist";
             this.dgv_teamlist.RowHeadersWidth = 62;
             this.dgv_teamlist.RowTemplate.Height = 28;
-            this.dgv_teamlist.Size = new System.Drawing.Size(212, 343);
+            this.dgv_teamlist.Size = new System.Drawing.Size(191, 343);
             this.dgv_teamlist.TabIndex = 13;
             this.dgv_teamlist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_teamlist_CellClick);
             // 
@@ -291,28 +291,28 @@
             this.lagDataGridViewTextBoxColumn.HeaderText = "Lag";
             this.lagDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.lagDataGridViewTextBoxColumn.Name = "lagDataGridViewTextBoxColumn";
-            this.lagDataGridViewTextBoxColumn.Width = 200;
+            this.lagDataGridViewTextBoxColumn.Width = 173;
             // 
             // dgv_result
             // 
-            this.dgv_result.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_result.BackgroundColor = System.Drawing.Color.White;
             this.dgv_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_result.Location = new System.Drawing.Point(450, 263);
             this.dgv_result.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_result.Name = "dgv_result";
             this.dgv_result.RowHeadersWidth = 62;
-            this.dgv_result.Size = new System.Drawing.Size(450, 174);
+            this.dgv_result.Size = new System.Drawing.Size(411, 174);
             this.dgv_result.TabIndex = 15;
             // 
             // dgv_gameSchedule
             // 
-            this.dgv_gameSchedule.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_gameSchedule.BackgroundColor = System.Drawing.Color.White;
             this.dgv_gameSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_gameSchedule.Location = new System.Drawing.Point(450, 35);
             this.dgv_gameSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_gameSchedule.Name = "dgv_gameSchedule";
             this.dgv_gameSchedule.RowHeadersWidth = 51;
-            this.dgv_gameSchedule.Size = new System.Drawing.Size(450, 185);
+            this.dgv_gameSchedule.Size = new System.Drawing.Size(411, 185);
             this.dgv_gameSchedule.TabIndex = 16;
             // 
             // btn_clear
@@ -320,7 +320,7 @@
             this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
             this.btn_clear.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clear.ForeColor = System.Drawing.Color.Orange;
-            this.btn_clear.Location = new System.Drawing.Point(798, 225);
+            this.btn_clear.Location = new System.Drawing.Point(759, 225);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(102, 33);
             this.btn_clear.TabIndex = 17;
@@ -345,7 +345,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(916, 448);
+            this.ClientSize = new System.Drawing.Size(888, 448);
             this.Controls.Add(this.pic_logoHome);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.dgv_gameSchedule);
@@ -418,10 +418,10 @@
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.DataGridView dgv_teamlist;
         private System.Windows.Forms.DataGridView dgv_result;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lagDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dgv_gameSchedule;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.PictureBox pic_logoHome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lagDataGridViewTextBoxColumn;
     }
 }
 

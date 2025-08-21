@@ -29,8 +29,31 @@ namespace SuperTipset
             // TODO: This line of code loads data into the 'superTipsetDataSet.Sport' table. You can move, or remove it, as needed.
             this.sportTableAdapter.Fill(this.superTipsetDataSet.Sport);
 
-        }
+            using (SqlConnection conn = new SqlConnection("Data Source=DESKTOP-S499K0O\\SQLEXPRESS;Initial Catalog=SuperTipset;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
+            using (SqlCommand cmd = new SqlCommand("SELECT SportID, Sport FROM Sport", conn))
+            {
+                conn.Open();
+                DataTable dt = new DataTable();
+                new SqlDataAdapter(cmd).Fill(dt);
 
+                // Lägg till en rad för placeholder
+                DataRow newRow = dt.NewRow();
+                newRow["SportID"] = DBNull.Value;   // Ingen riktig ID
+                newRow["Sport"] = "Välj sport...";   // Texten som visas
+                dt.Rows.InsertAt(newRow, 0);
+
+                // Koppla datan till comboboxen
+                cmb_sport.DisplayMember = "Sport";   // vad användaren ser
+                cmb_sport.ValueMember = "SportID";  // värdet i bakgrunden
+                cmb_sport.DataSource = dt;
+
+                cmb_sport.SelectedIndex = 0; // starta alltid på placeholdern
+            }
+            dgv_gameSchedule.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgv_result.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+        }
+        //KNAPP SOM NAVIGERAR TILL UNDERFORMULÄR
         private void btn_add_Click(object sender, EventArgs e)
         {
             frm_newteams frm_Newteams = new frm_newteams();
@@ -38,17 +61,19 @@ namespace SuperTipset
             this.Hide();
         }
 
-        //Avslutaknappen som stänger ner applikationen
+        //AVSLUTAKNAPPEN SOM STÄNGER NER APPLIKATIONEN
         private void btn_quit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        //Hämtar lag från vald sport i combobox och visar i datagridview
+        //------------------HÄMTAR LAG FRÅN VALD SPORT I COMBOBOX OCH VISAR I DATAGRIDVIEW----------------
         private void cmb_sport_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Hämta sportens ID eller namn från ComboBoxen
-            int sportID = Convert.ToInt32(cmb_sport.SelectedIndex + 1);
+            if (cmb_sport.SelectedIndex == 0 || cmb_sport.SelectedValue == null || cmb_sport.SelectedValue == DBNull.Value)
+                return;
+
+            int sportID = (int)cmb_sport.SelectedValue;
 
             // SQL-fråga för att hämta endast de lag som tillhör vald sport
             string query = "SELECT * FROM Lag WHERE SportID = @Sport";
@@ -104,6 +129,7 @@ namespace SuperTipset
                 }
             }
         }
+        //-----------------------GENERERA SPELSCHEMA---------------------------
         private List<MatchResultat> GenereraSpelschema(string sport, List<string> lag)
         {
             if (lag.Count != 4)
@@ -174,11 +200,81 @@ namespace SuperTipset
             // Visa i DataGridView (spelschema)
             dgv_gameSchedule.AutoGenerateColumns = true;
             dgv_gameSchedule.DataSource = matcher;
-            //dgv_result.DataSource = BeräknaTabell(matcher);
+            dgv_result.DataSource = BeräknaTabell(matcher);
         }
-        //Generera tabell för matchresultat
+        //--------------GENERERA TABELL FÖR MATCHRESULTAT-----------------
+        private DataTable BeräknaTabell(List<MatchResultat> matcher)
+        {
+            // Statistik för varje lag
+            var tabell = new Dictionary<string, (int S, int V, int O, int F, int Mplus, int Mminus, int P)>();
 
-        //Knapp för att rensa spelschema, resultattabell och valda lag
+            foreach (var match in matcher)
+            {
+                // Initiera båda lagen om de inte redan finns i tabellen
+                if (!tabell.ContainsKey(match.Hemma))
+                    tabell[match.Hemma] = (0, 0, 0, 0, 0, 0, 0);
+                if (!tabell.ContainsKey(match.Borta))
+                    tabell[match.Borta] = (0, 0, 0, 0, 0, 0, 0);
+
+                var hemma = tabell[match.Hemma];
+                var borta = tabell[match.Borta];
+
+                // Öka spelade matcher
+                hemma.S++;
+                borta.S++;
+
+                // Lägg till mål framåt/bakåt
+                hemma.Mplus += match.MålHemma;
+                hemma.Mminus += match.MålBorta;
+                borta.Mplus += match.MålBorta;
+                borta.Mminus += match.MålHemma;
+
+                // Avgör resultatet
+                if (match.MålHemma > match.MålBorta)
+                {
+                    hemma.V++; hemma.P += 3;
+                    borta.F++;
+                }
+                else if (match.MålHemma < match.MålBorta)
+                {
+                    borta.V++; borta.P += 3;
+                    hemma.F++;
+                }
+                else
+                {
+                    hemma.O++; hemma.P += 1;
+                    borta.O++; borta.P += 1;
+                }
+
+                // Uppdatera tillbaka till dictionary
+                tabell[match.Hemma] = hemma;
+                tabell[match.Borta] = borta;
+            }
+
+            // Skapa DataTable för att binda till DataGridView
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Lag", typeof(string));
+            dt.Columns.Add("S", typeof(int));
+            dt.Columns.Add("V", typeof(int));
+            dt.Columns.Add("O", typeof(int));
+            dt.Columns.Add("F", typeof(int));
+            dt.Columns.Add("M+", typeof(int));
+            dt.Columns.Add("M-", typeof(int));
+            dt.Columns.Add("P", typeof(int));
+
+            // Lägg till rader sorterat efter poäng (och ev. målskillnad)
+            foreach (var lag in tabell
+                .OrderByDescending(l => l.Value.P)               // sortera på poäng
+                .ThenByDescending(l => l.Value.Mplus - l.Value.Mminus)) // ev. målskillnad som tie-break
+            {
+                dt.Rows.Add(lag.Key, lag.Value.S, lag.Value.V, lag.Value.O, lag.Value.F,
+                            lag.Value.Mplus, lag.Value.Mminus, lag.Value.P);
+            }
+
+            return dt;
+        }
+
+        //KNAPP FÖR ATT RENSA SPELSCHEMA, RESULTATTABELL, COMBOBOX OCH VALDA LAG
         private void btn_clear_Click(object sender, EventArgs e)
         {
             dgv_gameSchedule.DataSource=null;
@@ -187,6 +283,8 @@ namespace SuperTipset
             txt_team3.Text=null;
             txt_team4.Text=null;
             dgv_result.DataSource=null;
+            dgv_teamlist.DataSource=null;
+            cmb_sport.Text = "Välj sport...";
         }
     }
     public class MatchResultat

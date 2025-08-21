@@ -42,9 +42,6 @@
             this.txt_team2 = new System.Windows.Forms.TextBox();
             this.txt_team3 = new System.Windows.Forms.TextBox();
             this.txt_team4 = new System.Windows.Forms.TextBox();
-            this.btn_create = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.btn_quit = new System.Windows.Forms.Button();
             this.sportTableAdapter = new SuperTipset.SuperTipsetDataSetTableAdapters.SportTableAdapter();
             this.lagBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lagTableAdapter = new SuperTipset.SuperTipsetDataSetTableAdapters.LagTableAdapter();
@@ -59,8 +56,11 @@
             this.lagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_result = new System.Windows.Forms.DataGridView();
             this.dgv_gameSchedule = new System.Windows.Forms.DataGridView();
-            this.btn_clear = new System.Windows.Forms.Button();
             this.pic_logoHome = new System.Windows.Forms.PictureBox();
+            this.btn_clear = new System.Windows.Forms.PictureBox();
+            this.btn_create = new System.Windows.Forms.PictureBox();
+            this.btn_add = new System.Windows.Forms.PictureBox();
+            this.btn_quit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.sportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTipsetDataSet)).BeginInit();
@@ -76,6 +76,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gameSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logoHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_clear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_create)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_quit)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -202,48 +206,6 @@
             this.txt_team4.Size = new System.Drawing.Size(130, 21);
             this.txt_team4.TabIndex = 9;
             // 
-            // btn_create
-            // 
-            this.btn_create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.btn_create.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_create.ForeColor = System.Drawing.Color.Orange;
-            this.btn_create.Location = new System.Drawing.Point(29, 287);
-            this.btn_create.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(129, 35);
-            this.btn_create.TabIndex = 10;
-            this.btn_create.Text = "Skapa spelschema";
-            this.btn_create.UseVisualStyleBackColor = false;
-            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.btn_add.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.ForeColor = System.Drawing.Color.Orange;
-            this.btn_add.Location = new System.Drawing.Point(29, 356);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(129, 35);
-            this.btn_add.TabIndex = 11;
-            this.btn_add.Text = "Lägg till nya lag";
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_quit
-            // 
-            this.btn_quit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.btn_quit.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quit.ForeColor = System.Drawing.Color.Orange;
-            this.btn_quit.Location = new System.Drawing.Point(29, 395);
-            this.btn_quit.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_quit.Name = "btn_quit";
-            this.btn_quit.Size = new System.Drawing.Size(129, 33);
-            this.btn_quit.TabIndex = 12;
-            this.btn_quit.Text = "Avsluta";
-            this.btn_quit.UseVisualStyleBackColor = false;
-            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
-            // 
             // sportTableAdapter
             // 
             this.sportTableAdapter.ClearBeforeFill = true;
@@ -315,19 +277,6 @@
             this.dgv_gameSchedule.Size = new System.Drawing.Size(411, 185);
             this.dgv_gameSchedule.TabIndex = 16;
             // 
-            // btn_clear
-            // 
-            this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.btn_clear.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clear.ForeColor = System.Drawing.Color.Orange;
-            this.btn_clear.Location = new System.Drawing.Point(759, 225);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(102, 33);
-            this.btn_clear.TabIndex = 17;
-            this.btn_clear.Text = "Rensa";
-            this.btn_clear.UseVisualStyleBackColor = false;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
-            // 
             // pic_logoHome
             // 
             this.pic_logoHome.BackColor = System.Drawing.Color.Transparent;
@@ -339,6 +288,50 @@
             this.pic_logoHome.TabIndex = 18;
             this.pic_logoHome.TabStop = false;
             // 
+            // btn_clear
+            // 
+            this.btn_clear.Image = global::SuperTipset.Properties.Resources.btn_cleartest7;
+            this.btn_clear.Location = new System.Drawing.Point(761, 225);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(100, 33);
+            this.btn_clear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_clear.TabIndex = 20;
+            this.btn_clear.TabStop = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
+            // btn_create
+            // 
+            this.btn_create.Image = global::SuperTipset.Properties.Resources.btn_createtest2;
+            this.btn_create.Location = new System.Drawing.Point(29, 290);
+            this.btn_create.Name = "btn_create";
+            this.btn_create.Size = new System.Drawing.Size(127, 33);
+            this.btn_create.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_create.TabIndex = 21;
+            this.btn_create.TabStop = false;
+            this.btn_create.Click += new System.EventHandler(this.btn_create_Click);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Image = global::SuperTipset.Properties.Resources.btn_addteams2;
+            this.btn_add.Location = new System.Drawing.Point(29, 357);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(127, 33);
+            this.btn_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_add.TabIndex = 22;
+            this.btn_add.TabStop = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_quit
+            // 
+            this.btn_quit.Image = global::SuperTipset.Properties.Resources.btn_quit2;
+            this.btn_quit.Location = new System.Drawing.Point(29, 396);
+            this.btn_quit.Name = "btn_quit";
+            this.btn_quit.Size = new System.Drawing.Size(127, 33);
+            this.btn_quit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_quit.TabIndex = 23;
+            this.btn_quit.TabStop = false;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
+            // 
             // frm_homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,14 +339,14 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(888, 448);
-            this.Controls.Add(this.pic_logoHome);
-            this.Controls.Add(this.btn_clear);
-            this.Controls.Add(this.dgv_gameSchedule);
-            this.Controls.Add(this.dgv_result);
-            this.Controls.Add(this.dgv_teamlist);
             this.Controls.Add(this.btn_quit);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.btn_create);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.pic_logoHome);
+            this.Controls.Add(this.dgv_gameSchedule);
+            this.Controls.Add(this.dgv_result);
+            this.Controls.Add(this.dgv_teamlist);
             this.Controls.Add(this.txt_team4);
             this.Controls.Add(this.txt_team3);
             this.Controls.Add(this.txt_team2);
@@ -383,6 +376,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_gameSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logoHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_clear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_create)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_quit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,9 +397,6 @@
         private System.Windows.Forms.TextBox txt_team2;
         private System.Windows.Forms.TextBox txt_team3;
         private System.Windows.Forms.TextBox txt_team4;
-        private System.Windows.Forms.Button btn_create;
-        private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Button btn_quit;
         private System.Windows.Forms.BindingSource bindingSource1;
         private SuperTipsetDataSet superTipsetDataSet;
         private System.Windows.Forms.BindingSource sportBindingSource;
@@ -419,9 +413,12 @@
         private System.Windows.Forms.DataGridView dgv_teamlist;
         private System.Windows.Forms.DataGridView dgv_result;
         private System.Windows.Forms.DataGridView dgv_gameSchedule;
-        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.PictureBox pic_logoHome;
         private System.Windows.Forms.DataGridViewTextBoxColumn lagDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox btn_clear;
+        private System.Windows.Forms.PictureBox btn_create;
+        private System.Windows.Forms.PictureBox btn_add;
+        private System.Windows.Forms.PictureBox btn_quit;
     }
 }
 

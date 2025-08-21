@@ -140,9 +140,6 @@
     <None Include="Resources\btn_clear.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn_create.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\btn_quit.png" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +150,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btn_cleartest5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cleartest7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_createtest2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_return2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_quit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_addteams2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

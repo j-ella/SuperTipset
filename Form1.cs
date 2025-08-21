@@ -286,6 +286,7 @@ namespace SuperTipset
             dgv_teamlist.DataSource=null;
             cmb_sport.Text = "Välj sport...";
         }
+
     }
     public class MatchResultat
     {
